@@ -8,7 +8,7 @@ function App() {
   async function handleSearch(event) {
     event.preventDefault();
     const search = event.target.search.value;
-    const API = `http://localhost:8080/photos?search=${search}`;
+    const API = `https://unsplosh-back-end.onrender.com/photos?search=${search}`;
     const res = await axios.get(API);
     console.log(res.data);
     setImgs(res.data);
